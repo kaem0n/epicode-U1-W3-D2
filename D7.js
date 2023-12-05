@@ -55,16 +55,32 @@ console.log('5) Somma dei numeri contenuti in "numbers":', sum2)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 
-
+const newNumbers = numbers.map(currentIndex => currentIndex + 10)
+console.log('6) Nuovo array newNumbers:', newNumbers)
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
+const strings = ['EPICODE', 'is', 'great']
+const stringIndexes = strings.map((indexes, n) => strings[n].length)
+console.log('7) Nuovo array stringIndexes:', stringIndexes)
+
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+const unevenNumbers = []
+const numberFinder = function () {
+  for (let i=0; i<100; i++) {
+    if (i % 2) {
+      unevenNumbers.push(i)
+    }
+  }
+}
+numberFinder()
+console.log('8) Array unevenNumbers:', unevenNumbers)
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -185,6 +201,15 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+
+// const oldestMovie = function () {
+//   const movieYears = []
+//   for (let i=0; i<movies.length; i++) {
+//     movieYears.push(movies[i].Year)
+//   }
+//   console.log(movieYears)
+// }
+// console.log(oldestMovie())
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
