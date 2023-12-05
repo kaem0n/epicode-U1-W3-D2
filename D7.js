@@ -257,5 +257,5 @@ console.log('14) Film con imdbID "tt0120737":', lotr)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
 
-// const first2003movie = movies.findIndex(year => 2003)
-// console.log('15) Film anno 2003:', first2003movie)
+const first2003movie = movies.findIndex((year, n) => movies[n].Year === '2003')
+console.log('15) Indice del primo film uscito nel 2003:', first2003movie)
