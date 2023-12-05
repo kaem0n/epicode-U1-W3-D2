@@ -239,7 +239,6 @@ console.log('12) Nuovo array "newerMovies":', newerMovies)
 */
 
 const movieYears = movies.map((years, n) => Number(movies[n].Year))
-console.log(movieYears)
 const yearSum = movieYears.reduce((acc, n) => acc + n)
 console.log('13) Nuovo array "yearSum":', yearSum)
 
