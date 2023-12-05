@@ -205,11 +205,18 @@ const movies = [
 // const oldestMovie = function () {
 //   const movieYears = []
 //   for (let i=0; i<movies.length; i++) {
-//     movieYears.push(movies[i].Year)
+//     movieYears.push(Number(movies[i].Year))
 //   }
 //   console.log(movieYears)
+//   for (let i=0; i<movies.length; i++) {
+//     if ((Number(movies[i].Year)) === Math.min(...movieYears)) {
+//       return movies[i].Title
+//     }
+//   }
 // }
 // console.log(oldestMovie())
+
+// CODICE FUNZIONANTE DA TRADURRE IN FOREACH
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
