@@ -8,6 +8,7 @@
 //   const last3 = string2.substr(string2.length-3)
 //   return (first2 + last3).toUpperCase()
 // }
+
 const first2last3 = (string1, string2) => (string1.slice(0, 2) + string2.substr(string2.length-3)).toUpperCase()
 console.log('1) Date due stringhe "Mario" e "Rossi", il risultato della funzione è:', first2last3('Mario', 'Rossi'))
 
@@ -19,23 +20,42 @@ const randomNumbers = []
 for (let i=0; i<10; i++) {
   randomNumbers[i] = Math.floor(Math.random()*101)
 }
-console.log(randomNumbers)
+console.log('2) Array randomNumbers:', randomNumbers)
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const evenNumbers = numbers.filter(n => n % 2 === 0)
+console.log('3) Array evenNumbers:', evenNumbers)
+
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+
+// let sum = 0
+// for (let i=0; i<numbers.length; i++) {
+//   sum += numbers[i]
+// }
+// console.log(sum)
+
+let sum = 0
+const numberSum = numbers.forEach(n => sum += numbers[n-1])
+console.log('4) Somma dei numeri contenuti in "numbers":', sum)
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+const sum2 = numbers.reduce((acc, n) => acc + n)
+console.log('5) Somma dei numeri contenuti in "numbers":', sum2)
+
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+
+
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
